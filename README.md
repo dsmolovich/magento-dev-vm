@@ -5,11 +5,14 @@
 5. Issue ```vagrant up``` command
 6. Sleep, drink, watch TV until the virtual machine is completed ...
 7. Add the next line to your hosts file:
+
     ```
     192.168.57.100  magento.local
     ```
+
 7. Visit http://magento.local/
 8. Follow the Magento installation instructions. At the ```Step 2: Add a Database``` step use next settings:
+
     ```
     Database Server Host: localhost
     Database Server Username: magentouser
