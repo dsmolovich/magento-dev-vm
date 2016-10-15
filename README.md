@@ -1,7 +1,7 @@
 1. Install [VirtualBox] (https://www.virtualbox.org/)
 2. Install [Vagrant] (https://www.vagrantup.com/)
 3. Clone this repository
-4. Go to ```src``` directory and follow the [Magento download and unpack instructions] (src/magento/README.md)
+4. Go to ```src``` directory and follow the [Magento download and unpack instructions] (src/README.md)
 5. Issue ```vagrant up``` command
 6. Sleep, drink, watch TV until the virtual machine is completed ...
 7. Add the next line to your hosts file:
