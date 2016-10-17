@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
         magentoNode.vm.network "private_network", ip: "192.168.57.100"
         magentoNode.vm.hostname = "magento-node"
         magentoNode.vm.network :forwarded_port, guest: 22, host: 1234, auto_correct: true
+        magentoNode.vm.synced_folder "src/magento", "/var/www/magento"
 
         magentoNode.vm.provision "shell", inline: <<-SHELL
             /bin/sh /vagrant/.setup/magento-node/install.sh

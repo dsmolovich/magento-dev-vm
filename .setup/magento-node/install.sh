@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Vars:
 SETUP_DIR_CUSTOM="/vagrant/.setup/magento-node"
-MAGENTO_SRC_DIR='/vagrant/src/magento'
-MAGENTO_DEST_DIR='/var/www/magento'
 MAGENTO_DB_HOST='localhost'
 MAGENTO_DB_NAME='magentodb'
 MAGENTO_DB_USER='magentouser'
@@ -36,12 +34,6 @@ systemctl enable mysqld
 
 # Files/configs overwrite:
 cp -r $SETUP_DIR_CUSTOM/* /
-
-# Custom actions:
-mkdir -p $MAGENTO_DEST_DIR
-rsync -azh $MAGENTO_SRC_DIR/ $MAGENTO_DEST_DIR/
-chmod 0755 $MAGENTO_DEST_DIR
-chmod -R 0777 $MAGENTO_DEST_DIR/var $MAGENTO_DEST_DIR/app/etc $MAGENTO_DEST_DIR/pub/media $MAGENTO_DEST_DIR/pub/static
 
 # Start services:
 service mysqld start
