@@ -48,3 +48,6 @@ service httpd start
 # Firewall > Pass http connections:
 firewall-cmd --permanent --zone=public --add-port=80/tcp
 firewall-cmd --reload
+
+# Files owners/groups:
+chown root:vagrant /var/lib/php/*
